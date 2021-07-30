@@ -3,4 +3,6 @@ FROM hashicorp/packer:light@sha256:93291f0b3041080b47b065b77309e5c1beee52c6bd691
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 
+RUN apk -u add ansible
+
 ENTRYPOINT ["/entrypoint.sh"]
